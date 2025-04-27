@@ -137,6 +137,20 @@ function App() {
               soluciones escalables y mantenibles, implementando las mejores prácticas de desarrollo y patrones de diseño.
               Actualmente profundizando en Inteligencia Artificial y Big Data, con el objetivo de integrar estas tecnologías en soluciones empresariales.
             </p>
+            <a 
+              href="/CVPabloSánchez.pdf" 
+              download 
+              className="download-cv-button"
+            >
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                viewBox="0 0 24 24" 
+                fill="currentColor"
+              >
+                <path d="M12 15.575L16.95 10.625L15.8875 9.55625L12.875 12.5687V4.5H11.125V12.5687L8.11251 9.55625L7.05001 10.625L12 15.575ZM5.75001 19.5C5.33751 19.5 4.98334 19.3521 4.68751 19.0562C4.39168 18.7604 4.24384 18.4062 4.25001 18V15.5H6.00001V18H18V15.5H19.75V18C19.75 18.4125 19.6021 18.7667 19.3063 19.0625C19.0104 19.3583 18.6562 19.5062 18.25 19.5H5.75001Z"/>
+              </svg>
+              Descargar CV
+            </a>
           </div>
         </motion.div>
       </section>
