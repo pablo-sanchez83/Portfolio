@@ -29,7 +29,7 @@ const ExperienceCard = ({ title, company, period, description, image, techStack,
           {techStack.map((tech, index) => (
             <img 
               key={index} 
-              src={`/skills/${tech.toLowerCase()}.svg`} 
+              src={`/skills/${tech}.svg`} 
               alt={tech} 
               title={tech}
             />
