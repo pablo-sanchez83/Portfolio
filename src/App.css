@@ -537,6 +537,10 @@ body, html {
     display: block;
   }
 
+  .mobile-menu-button:focus {
+    outline: none;
+  }
+
   .mobile-menu {
     display: block;
   }
