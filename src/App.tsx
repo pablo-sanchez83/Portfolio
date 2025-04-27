@@ -124,7 +124,7 @@ function App() {
         >
           <div className="about-image-container">
             <img 
-              src="/public/fotopersonal.jpeg" 
+              src="/fotopersonal.jpeg" 
               alt="Tu foto de perfil" 
               className="about-image"
             />
