@@ -58,13 +58,13 @@ const Skills = () => {
     { name: 'Español', emoji: '🇪🇸', category: 'Idiomas' },
     { name: 'Inglés', emoji: '🇬🇧', category: 'Idiomas' },
 
-    // Habilidades blandas
-    { name: 'Creatividad', emoji: '🎨', category: 'Habilidades blandas' },
-    { name: 'Trabajo en equipo', emoji: '🤝', category: 'Habilidades blandas' },
-    { name: 'Profesionalidad', emoji: '👔', category: 'Habilidades blandas' },
-    { name: 'Adaptabilidad', emoji: '🔄', category: 'Habilidades blandas' },
-    { name: 'Pensamiento analítico', emoji: '🔍', category: 'Habilidades blandas' },
-    { name: 'Resolución de problemas', emoji: '💡', category: 'Habilidades blandas' }
+    // Softskills
+    { name: 'Creatividad', emoji: '🎨', category: 'Softskills' },
+    { name: 'Trabajo en equipo', emoji: '🤝', category: 'Softskills' },
+    { name: 'Profesionalidad', emoji: '👔', category: 'Softskills' },
+    { name: 'Adaptabilidad', emoji: '🔄', category: 'Softskills' },
+    { name: 'Pensamiento analítico', emoji: '🔍', category: 'Softskills' },
+    { name: 'Resolución de problemas', emoji: '💡', category: 'Softskills' }
   ]);
 
   const categorias = {
@@ -93,21 +93,21 @@ const Skills = () => {
       skills: skills.filter(skill => skill.category === 'Big Data'),
       color: '#795548' // Marrón
     },
-    'Otras': {
-      title: 'Otras',
-      skills: skills.filter(skill => skill.category === 'Otras'),
-      color: '#FF9800' // Naranja
+    'Softskills': {
+      title: 'Softskills',
+      skills: skills.filter(skill => skill.category === 'Softskills'),
+      color: '#00BCD4' // Cyan
     },
     'Idiomas': {
       title: 'Idiomas',
       skills: skills.filter(skill => skill.category === 'Idiomas'),
       color: '#E91E63' // Rosa
     },
-    'Habilidades blandas': {
-      title: 'Habilidades blandas',
-      skills: skills.filter(skill => skill.category === 'Habilidades blandas'),
-      color: '#00BCD4' // Cyan
-    }
+    'Otras': {
+      title: 'Otras',
+      skills: skills.filter(skill => skill.category === 'Otras'),
+      color: '#FF9800' // Naranja
+    },
   };
 
   return (
