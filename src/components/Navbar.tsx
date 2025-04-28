@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import ThemeToggle from './ThemeToggle';
 
@@ -35,36 +35,43 @@ const Navbar = () => {
             ))}
           </ul>
 
-          <ThemeToggle />
-          
-          {/* Mobile Menu Button */}
-          <button
-            className="mobile-menu-button"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
-            <span className={`hamburger ${isOpen ? 'open' : ''}`}></span>
-          </button>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+            <ThemeToggle />
+            {/* Mobile Menu Button */}
+            <button
+              className="mobile-menu-button"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle menu"
+            >
+              <span className={`hamburger ${isOpen ? 'open' : ''}`}></span>
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
-        <motion.ul
-          className={`mobile-menu ${isOpen ? 'open' : ''}`}
-          initial={false}
-          animate={{ height: isOpen ? 'auto' : 0 }}
-        >
-          {navItems.map((item) => (
-            <motion.li
-              key={item.name}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.ul
+              className="mobile-menu"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.2 }}
             >
-              <a href={item.href} onClick={() => setIsOpen(false)}>
-                {item.name}
-              </a>
-            </motion.li>
-          ))}
-        </motion.ul>
+              {navItems.map((item) => (
+                <motion.li
+                  key={item.name}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <a href={item.href} onClick={() => setIsOpen(false)}>
+                    {item.name}
+                  </a>
+                </motion.li>
+              ))}
+            </motion.ul>
+          )}
+        </AnimatePresence>
       </div>
     </motion.nav>
   );
