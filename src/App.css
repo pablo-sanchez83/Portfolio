@@ -1,8 +1,14 @@
 #root {
-  max-width: 1280px;
+  width: 100%;
+  max-width: var(--max-width);
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
   text-align: center;
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .logo {
@@ -77,12 +83,16 @@ body, html {
   line-height: 1.6;
   background-color: var(--background-color);
   transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  justify-content: center;
 }
 
 .app {
+  width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
   overflow-x: hidden;
+  position: relative;
 }
 
 /* Navbar Styles */
@@ -107,7 +117,7 @@ body, html {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 .nav-right {
@@ -239,6 +249,40 @@ body, html {
   line-height: 1.8;
   margin-bottom: 1.5rem;
   text-align: justify;
+}
+
+@media screen and (max-width: 768px) {
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .about-image-container {
+    float: none;
+    width: 250px;
+    height: 250px;
+    margin: 2rem auto;
+    shape-outside: none;
+    transform: none;
+  }
+
+  .about-text {
+    width: 100%;
+  }
+
+  .about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-text p {
+    font-size: 1.1rem;
+    text-align: left;
+    padding: 0 0.5rem;
+  }
 }
 
 /* Projects Section */
@@ -658,12 +702,60 @@ body, html {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+  #root {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .app {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  body, html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .projects-section, 
+  .about-section, 
+  .skills-section, 
+  .contact-section,
+  .hero-section {
+    width: 100%;
+    padding: 4rem 1rem;
+    overflow: hidden;
+  }
+
+  .projects-grid,
+  .skills-categories,
+  .contact-buttons {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .project-card,
+  .skill-category {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 1rem 0;
+    box-sizing: border-box;
+  }
+
   .navbar-container {
     padding: 0 1rem;
   }
 
   .nav-right {
     justify-content: space-between;
+    width: 100%;
   }
 
   .desktop-menu {
@@ -679,6 +771,7 @@ body, html {
 
   .mobile-menu {
     display: block !important;
+    padding: 0;
   }
 
   .navbar-container {
@@ -686,54 +779,35 @@ body, html {
     align-items: stretch;
   }
 
-  .hero-content h1 {
-    font-size: 3rem;
-  }
-  
-  .hero-content p {
-    font-size: 1.2rem;
-  }
-
-  .typewriter-text {
-    font-size: 2.5rem;
-  }
-  
-  .typewriter-container {
-    min-height: 100px;
-  }
-
-  .projects-grid {
+  .hero-content {
     padding: 0 1rem;
   }
 
-  .project-card {
-    flex: 1 1 100%;
-    max-width: 400px;
-  }
-
-  .Typewriter__cursor {
+  .hero-content h1 {
     font-size: 2.5rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+    padding: 0 1rem;
   }
 
   .about-content {
     padding: 0 1rem;
   }
 
-  .about-image-container {
-    float: none;
-    width: 250px;
-    height: 250px;
-    margin: 0 auto 2rem;
-    transform: none;
+  .skills-categories {
+    padding: 0 1rem;
   }
 
-  .about-text h2 {
-    font-size: 2.5rem;
+  .skill-category {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin: 0;
   }
 
-  .about-text p {
-    font-size: 1.1rem;
-    text-align: left;
+  .contact-buttons {
+    padding: 0 1rem;
   }
 }
 
