@@ -5,6 +5,7 @@ import Projects from './components/Projects'
 import Skills from './components/Skills'
 import ContactButtons from './components/ContactButtons'
 import ExperienceCard from './components/ExperienceCard'
+import GitHubCalendarComponent from './components/GitHubCalendar'
 import { useState, useEffect } from 'react'
 import './App.css'
 
@@ -188,6 +189,18 @@ function App() {
 
       {/* Skills Section */}
       <Skills />
+
+      {/* GitHub Calendar Section */}
+      <section id="github-calendar" className="github-calendar-section">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <GitHubCalendarComponent />
+        </motion.div>
+      </section>
 
       {/* Contact Section */}
       <section id="contact" className="contact-section">

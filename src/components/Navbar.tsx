@@ -10,6 +10,7 @@ const Navbar = () => {
     { name: 'Sobre Mí', href: '#about' },
     { name: 'Proyectos', href: '#projects' },
     { name: 'Habilidades', href: '#skills' },
+    { name: 'GitHub', href: '#github-calendar' },
     { name: 'Contacto', href: '#contact' },
   ];
 

@@ -31,6 +31,13 @@ const Projects = () => {
       imageUrl: '/projects/eatbook.png',
       techStack: ['React', 'Node.js', 'Django', 'PostgreSQL', 'REST API'],
       githubUrl: 'https://github.com/pablo-sanchez83/Eatbook'
+    },
+    {
+      name: 'HTTPShort',
+      description: 'Acortador de URLs desarrollado con React. Permite acortar URLs largas a versiones más manejables. Incluye una interfaz de usuario intuitiva.',
+      imageUrl: '/projects/httpshort.png',
+      techStack: ['React', 'Vite', 'TypeScript', 'TailwindCSS', 'Firebase'],
+      githubUrl: 'https://github.com/pablo-sanchez83/httpshort'
     }
   ];
 
