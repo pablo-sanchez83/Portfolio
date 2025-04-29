@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pablosanchez.is-a.dev/sitemap.xml 
+Sitemap: https://pablosanchez.dev/sitemap.xml 
